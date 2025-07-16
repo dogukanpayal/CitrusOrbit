@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginScreenFragment">
+
+    <fragment
+        android:id="@+id/loginScreenFragment"
+        android:name="com.dogukanpayal.developmentproject.LoginScreenFragment"
+        android:label="fragment_login_screen"
+        tools:layout="@layout/fragment_login_screen" >
+        <action
+            android:id="@+id/action_loginScreenFragment_to_registerScreenFragment"
+            app:destination="@id/registerScreenFragment" />
+        <action
+            android:id="@+id/action_loginScreenFragment_to_forgotYourPasswordFragment"
+            app:destination="@id/forgotYourPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerScreenFragment"
+        android:name="com.dogukanpayal.developmentproject.RegisterScreenFragment"
+        android:label="fragment_register_screen"
+        tools:layout="@layout/fragment_register_screen" >
+        <action
+            android:id="@+id/action_registerScreenFragment_to_loginScreenFragment"
+            app:destination="@id/loginScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotYourPasswordFragment"
+        android:name="com.dogukanpayal.developmentproject.ForgotYourPasswordFragment"
+        android:label="fragment_forgot_your_password"
+        tools:layout="@layout/fragment_forgot_your_password" >
+        <action
+            android:id="@+id/action_forgotYourPasswordFragment_to_loginScreenFragment"
+            app:destination="@id/loginScreenFragment" />
+    </fragment>
+</navigation>
