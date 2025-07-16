@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "898702370800",
+    "project_id": "citrus-orbit",
+    "storage_bucket": "citrus-orbit.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:898702370800:android:a820a60f7e359568405f35",
+        "android_client_info": {
+          "package_name": "com.dogukanpayal.developmentproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl67xOJfiMv5A8ynf9csvxXxC8hgyybUQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

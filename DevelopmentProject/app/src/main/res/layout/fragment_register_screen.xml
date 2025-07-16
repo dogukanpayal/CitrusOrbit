@@ -171,6 +171,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:text="KVKK metnini okudum ve onaylıyorum"
+            android:buttonTint="@color/turuncu"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/passwordAgainInputLayout" />
 
