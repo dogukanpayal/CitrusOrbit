@@ -15,6 +15,9 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsAnimationCompat
 
 class RegisterScreenFragment : Fragment() {
 
@@ -25,6 +28,7 @@ class RegisterScreenFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         firebaseDatabase = FirebaseDatabase.getInstance()
         databaseReference = firebaseDatabase.reference.child("users")
     }
@@ -40,6 +44,38 @@ class RegisterScreenFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentRegisterScreenBinding.bind(view)
+
+        val whiteBox = binding.registerFormFieldBox
+
+        ViewCompat.setOnApplyWindowInsetsListener(whiteBox){v,insets ->
+            val imeHeight = insets.getInsets(WindowInsetsCompat.Type.ime()).bottom
+            v.translationY = -imeHeight.toFloat()
+            insets
+        }
+
+        ViewCompat.setWindowInsetsAnimationCallback(whiteBox,
+            object : WindowInsetsAnimationCompat.Callback(
+                WindowInsetsAnimationCompat.Callback.DISPATCH_MODE_CONTINUE_ON_SUBTREE
+            ){
+
+                override fun onProgress(
+                    insets: WindowInsetsCompat,
+                    runningAnimations: MutableList<WindowInsetsAnimationCompat>
+                ): WindowInsetsCompat {
+                    val imeHeight = insets.getInsets(WindowInsetsCompat.Type.ime()).bottom
+                    whiteBox.translationY = -imeHeight.toFloat()
+                    return insets
+                }
+            }
+
+        )
+
+
+
+
+
+
+
 
         binding.kayitOlButton.isEnabled = binding.KVKKCheckBox.isChecked
 
