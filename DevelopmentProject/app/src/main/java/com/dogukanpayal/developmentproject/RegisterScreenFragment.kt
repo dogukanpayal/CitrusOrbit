@@ -18,6 +18,7 @@ import com.google.firebase.database.ValueEventListener
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsAnimationCompat
+import androidx.core.view.doOnLayout
 
 class RegisterScreenFragment : Fragment() {
 
@@ -46,29 +47,35 @@ class RegisterScreenFragment : Fragment() {
         _binding = FragmentRegisterScreenBinding.bind(view)
 
         val whiteBox = binding.registerFormFieldBox
+        val scrollView = binding.formScrollView
 
-        ViewCompat.setOnApplyWindowInsetsListener(whiteBox){v,insets ->
-            val imeHeight = insets.getInsets(WindowInsetsCompat.Type.ime()).bottom
-            v.translationY = -imeHeight.toFloat()
-            insets
-        }
+        whiteBox.doOnLayout {
 
-        ViewCompat.setWindowInsetsAnimationCallback(whiteBox,
-            object : WindowInsetsAnimationCompat.Callback(
-                WindowInsetsAnimationCompat.Callback.DISPATCH_MODE_CONTINUE_ON_SUBTREE
-            ){
+            val originalY = it.y
 
-                override fun onProgress(
-                    insets: WindowInsetsCompat,
-                    runningAnimations: MutableList<WindowInsetsAnimationCompat>
-                ): WindowInsetsCompat {
-                    val imeHeight = insets.getInsets(WindowInsetsCompat.Type.ime()).bottom
-                    whiteBox.translationY = -imeHeight.toFloat()
-                    return insets
-                }
+            ViewCompat.setOnApplyWindowInsetsListener(whiteBox) { v, insets ->
+                val imeHeight = insets.getInsets(WindowInsetsCompat.Type.ime()).bottom.toFloat()
+                v.translationY = -minOf(imeHeight, originalY)
+
+
+                insets
             }
-
-        )
+            ViewCompat.setWindowInsetsAnimationCallback(whiteBox,
+                object : WindowInsetsAnimationCompat.Callback(
+                    WindowInsetsAnimationCompat.Callback.DISPATCH_MODE_CONTINUE_ON_SUBTREE
+                ) {
+                    override fun onProgress(
+                        insets: WindowInsetsCompat,
+                        runningAnimations: MutableList<WindowInsetsAnimationCompat>
+                    ): WindowInsetsCompat {
+                        val imeHeight = insets.getInsets(WindowInsetsCompat.Type.ime()).bottom.toFloat()
+                        whiteBox.translationY = -minOf(imeHeight, originalY)
+                        scrollView.scrollTo(0,binding.kayitOlButton.bottom)
+                        return insets
+                    }
+                }
+            )
+        }
 
 
 
