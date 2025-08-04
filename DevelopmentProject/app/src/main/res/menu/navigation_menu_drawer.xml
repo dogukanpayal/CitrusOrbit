@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Birinci grup: 1 tane seçili kılınabilir -->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/item1"
+            android:title="title1"
+            />
+        <item
+            android:id="@+id/item2"
+            android:title="title2"/>
+        <item
+            android:id="@+id/item3"
+            android:title="title3"/>
+    </group>
+
+    <!-- Başlık -->
+    <item
+        android:title="Subtitle"
+        android:enabled="false"/>
+
+    <!-- İkinci grup: yine single seçili kılınabilir -->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/item4"
+            android:title="title4"/>
+        <item
+            android:id="@+id/item5"
+            android:title="title5"/>
+        <item
+            android:id="@+id/item6"
+            android:title="title6"/>
+    </group>
+</menu>

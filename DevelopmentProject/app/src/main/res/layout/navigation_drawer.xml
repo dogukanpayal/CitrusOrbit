@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.navigation.NavigationView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigationView"
+    app:menu="@menu/navigation_menu_drawer"
+    app:itemTextColor="@color/nav_item_color_state"
+    app:itemIconTint="@color/nav_item_color_state"
+    app:headerLayout="@layout/header_navigation_drawer"
+    >
+
+</com.google.android.material.navigation.NavigationView>

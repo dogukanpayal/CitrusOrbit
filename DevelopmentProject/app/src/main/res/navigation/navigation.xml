@@ -35,4 +35,14 @@
             android:id="@+id/action_forgotYourPasswordFragment_to_loginScreenFragment"
             app:destination="@id/loginScreenFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/page1Fragment"
+        android:name="com.dogukanpayal.developmentproject.Page1Fragment"
+        android:label="fragment_page1"
+        tools:layout="@layout/fragment_page1" />
+    <fragment
+        android:id="@+id/page2Fragment"
+        android:name="com.dogukanpayal.developmentproject.Page2Fragment"
+        android:label="fragment_page2"
+        tools:layout="@layout/fragment_page2" />
 </navigation>

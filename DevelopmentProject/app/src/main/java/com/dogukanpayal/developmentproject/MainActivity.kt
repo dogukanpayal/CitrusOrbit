@@ -1,11 +1,18 @@
 package com.dogukanpayal.developmentproject
 
 import android.os.Bundle
+import androidx.appcompat.widget.Toolbar
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowCompat
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.findNavController
+import com.google.android.material.navigation.NavigationView
 
 
 class MainActivity : AppCompatActivity() {
@@ -14,9 +21,38 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+
+        val drawer = findViewById<DrawerLayout>(R.id.drawer_layout)
+        val toggle = ActionBarDrawerToggle(
+            this, drawer, toolbar,
+            R.string.navigation_open , R.string.navigation_close
+        )
+
+        drawer.addDrawerListener(toggle)
+        toggle.syncState()
+
+        val navView = findViewById<NavigationView>(R.id.navigationView)
+        navView.setNavigationItemSelectedListener { item ->
+            item.isChecked=true
+
+            when (item.itemId){
+                R.id.item1 -> findNavController(R.id.nav_host_fragment)
+                    .navigate(R.id.page1Fragment)
+
+                R.id.item2 -> findNavController(R.id.nav_host_fragment)
+                    .navigate(R.id.page2Fragment)
+            }
+            drawer.closeDrawer(GravityCompat.START)
+            true
+        }
+
+
+
         WindowCompat.setDecorFitsSystemWindows(window, false)
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.drawer_layout)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets

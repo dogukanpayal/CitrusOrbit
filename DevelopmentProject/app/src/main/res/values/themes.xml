@@ -6,4 +6,17 @@
     </style>
 
     <style name="Theme.DevelopmentProject" parent="Base.Theme.DevelopmentProject" />
+
+    <style name="Theme.DevelopmentProject.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+    </style>
+
+
+
+
+
+
 </resources>
