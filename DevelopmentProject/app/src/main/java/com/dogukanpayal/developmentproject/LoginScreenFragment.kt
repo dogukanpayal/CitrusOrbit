@@ -3,11 +3,14 @@ package com.dogukanpayal.developmentproject
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
+import android.widget.ImageButton
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsAnimationCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.doOnLayout
 import android.widget.Toast
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.fragment.findNavController
 import com.dogukanpayal.developmentproject.databinding.FragmentLoginScreenBinding
 import com.google.firebase.database.*
@@ -26,6 +29,13 @@ class LoginScreenFragment : Fragment(R.layout.fragment_login_screen) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentLoginScreenBinding.bind(view)
+
+        val drawerLayout = requireActivity().findViewById<DrawerLayout>(R.id.drawer_layout)
+
+        view.findViewById<ImageButton>(R.id.navAccessButton).setOnClickListener{
+            drawerLayout.openDrawer(GravityCompat.START)
+        }
+
 
 
         val formBox   = binding.formFieldBox
