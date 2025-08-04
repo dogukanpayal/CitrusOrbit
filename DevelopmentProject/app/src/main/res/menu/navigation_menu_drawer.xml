@@ -1,34 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Birinci grup: 1 tane seçili kılınabilir -->
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/item1"
-            android:title="title1"
-            />
-        <item
-            android:id="@+id/item2"
-            android:title="title2"/>
-        <item
-            android:id="@+id/item3"
-            android:title="title3"/>
-    </group>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- Başlık -->
+
+        <item
+            android:title="Robot Kontrol"
+            android:enabled="false">
+            <menu>
+                <group
+                    android:id="@+id/robotControlGroup"
+                    android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/item1"
+                        android:icon="@drawable/outline_alarm_on_24"
+                        android:title="Robot Kontrolü" />
+                    <item
+                        android:id="@+id/item2"
+                        android:icon="@drawable/outline_alarm_on_24"
+                        android:title="Oturum Geçmişi"/>
+                </group>
+            </menu>
+        </item>
+
     <item
-        android:title="Subtitle"
-        android:enabled="false"/>
-
-    <!-- İkinci grup: yine single seçili kılınabilir -->
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/item4"
-            android:title="title4"/>
-        <item
-            android:id="@+id/item5"
-            android:title="title5"/>
-        <item
-            android:id="@+id/item6"
-            android:title="title6"/>
-    </group>
+        android:title="Ayarlar"
+        android:enabled="false">
+        <menu>
+            <group
+                android:id="@+id/settingsGroup"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/item3"
+                    android:icon="@drawable/outline_alarm_on_24"
+                    android:title="Profil" />
+                <item
+                    android:id="@+id/item4"
+                    android:icon="@drawable/outline_alarm_on_24"
+                    android:title="Hakkında"/>
+            </group>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/item5"
+        android:icon="@drawable/outline_alarm_on_24"
+        android:title="Çıkış Yap">
+    </item>
 </menu>
