@@ -1,7 +1,13 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="16dp" android:height="16dp"
+    android:name="checkbox_vector"
+    android:width="24dp" android:height="24dp"
     android:viewportWidth="24" android:viewportHeight="24">
     <path
-        android:fillColor="@android:color/white"
-        android:pathData="M9,16.2L4.8,12l-1.4,1.4L9,19l12,-12l-1.4,-1.4z"/>
+        android:name="check_path"
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="@android:color/white"
+        android:strokeWidth="2"
+        android:pathData="M4,12 L10,18 L20,6"
+        android:trimPathStart="0"
+        android:trimPathEnd="0"/>
 </vector>
