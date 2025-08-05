@@ -4,8 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:fitsSystemWindows="true"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background_style">
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="-100dp"
+        android:background="@drawable/background_style"
+        app:layout_constraintBottom_toTopOf="@+id/registerFormFieldBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
