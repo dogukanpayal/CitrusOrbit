@@ -5,15 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:background="@drawable/background_style">
 
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guide_header_bottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.45" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/guide_header_bottom">
+        app:layout_constraintBottom_toTopOf="@id/formFieldBox">
 
         <ImageView
             android:id="@+id/logoImageView"
@@ -52,15 +46,13 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/formFieldBox"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="-30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/form_field_box_style"
         android:fitsSystemWindows="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guide_header_bottom">
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <TextView
@@ -91,7 +83,7 @@
         <androidx.core.widget.NestedScrollView
             android:id="@+id/formScrollView"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:fillViewport="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -108,32 +100,34 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/emailInputContainer"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
                     android:background="@drawable/text_input_bg_selector"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
                     android:hint="Email"
-                    >
-                    <EditText
+                    android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined">
+
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/emailInputBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/text_input_edit_text_style"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
                         android:inputType="textEmailAddress" />
                 </com.google.android.material.textfield.TextInputLayout>
 
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/passwordInputContainer"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="16dp"
                     android:background="@drawable/text_input_bg_selector"
                     android:hint="Şifre"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
                     app:endIconMode="password_toggle">
 
@@ -184,8 +178,8 @@
                     android:layout_margin="20dp"
                     android:background="@drawable/button_style"
                     android:backgroundTint="@null"
-                    app:backgroundTint="@null"
                     android:text="Giriş Yap"
+                    app:backgroundTint="@null"
 
                     />
 
@@ -216,7 +210,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="12dp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -233,7 +227,9 @@
                         android:text=" Kayıt Ol"
                         android:textColor="@color/turuncu"
                         android:textStyle="bold" />
+
                 </LinearLayout>
+
 
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>

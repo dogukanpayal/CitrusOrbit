@@ -2,17 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_style">
 
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guide_header_bottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/guide_header_bottom">
+        app:layout_constraintBottom_toTopOf="@id/registerFormFieldBox">
 
         <ImageView
             android:id="@+id/registerImageView"
@@ -39,13 +33,13 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/registerFormFieldBox"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/form_field_box_style"
         android:fitsSystemWindows="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guide_header_bottom">
+        app:layout_constraintTop_toBottomOf="@id/registerHeaderImageConstraitBox">
 
 
         <TextView
@@ -64,7 +58,7 @@
         <androidx.core.widget.NestedScrollView
             android:id="@+id/formScrollView"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:fillViewport="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -104,7 +98,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:hint="E-posta"
                     android:background="@drawable/text_input_bg_selector"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -126,7 +120,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:hint="Telefon Numarası"
                     android:background="@drawable/text_input_bg_selector"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -148,7 +142,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:hint="Şifre"
                     app:endIconMode="password_toggle"
                     android:background="@drawable/text_input_bg_selector"
@@ -171,7 +165,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:hint="Şifreyi Tekrar Giriniz"
                     android:background="@drawable/text_input_bg_selector"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -192,7 +186,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
-                    android:layout_marginTop="16dp">
+                    android:layout_marginTop="10dp">
 
                     <androidx.appcompat.widget.AppCompatCheckBox
                         android:id="@+id/KVKKCheckBox"
@@ -225,7 +219,7 @@
                     android:id="@+id/kayitOlButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
+                    android:layout_margin="10dp"
                     android:background="@drawable/button_style"
                     android:backgroundTint="@null"
                     app:backgroundTint="@null"
@@ -235,7 +229,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
