@@ -38,13 +38,15 @@ class Page1Fragment : Fragment() {
                     .getDrawable(requireContext(), R.drawable.checkbox_checked_layer)!!
                         as LayerDrawable
                 buttonView.buttonDrawable = ld
-
                 val tick = ld.findDrawableByLayerId(R.id.layer_tick)
-                if (tick is Animatable) tick.start()
-            }
-            else {
-                buttonView.buttonDrawable =
-                    ContextCompat.getDrawable(requireContext(), R.drawable.checkbox_unchecked)
+                (tick as? Animatable)?.start()
+            } else {
+                val ld = ContextCompat
+                    .getDrawable(requireContext(), R.drawable.checkbox_unchecked_layer)!!
+                        as LayerDrawable
+                buttonView.buttonDrawable = ld
+                val tick = ld.findDrawableByLayerId(R.id.layer_tick)
+                (tick as? Animatable)?.start()
             }
         }
     }

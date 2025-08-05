@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape
+            android:shape="rectangle">
+            <size android:width="24dp" android:height="24dp"/>
+            <solid android:color="@android:color/transparent"/>
+            <stroke android:color="@color/blackGray" android:width="2dp"></stroke>
+            <corners android:radius="6dp"></corners>
+        </shape>
+    </item>
+
+    <item
+        android:top="2dp"
+        android:bottom="2dp"
+        android:left="2dp"
+        android:right="2dp"
+        >
+        <shape
+            android:shape="rectangle"
+            >
+            <size android:width="24dp" android:height="24dp"></size>
+            <solid android:color="@android:color/transparent"></solid>
+        </shape>
+    </item>
+
+    <item
+        android:top="4dp"
+        android:bottom="4dp"
+        android:left="4dp"
+        android:right="4dp"
+        >
+        <shape
+            android:shape="rectangle"
+            >
+            <size android:width="24dp" android:height="24dp"></size>
+            <solid android:color="@color/blackGray"></solid>
+            <corners android:radius="6dp"></corners>
+        </shape>
+    </item>
+
+
+    <item
+        android:id="@+id/layer_tick"
+        android:drawable="@drawable/avd_checkbox_unchecked_anim"
+        android:gravity="center"/>
+</layer-list>
