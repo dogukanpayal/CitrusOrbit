@@ -18,7 +18,9 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-
+    <style name="ThemeOverlay.AppTheme.TextInputEditText.Outlined" parent="">
+        <item name="colorPrimary">@color/turuncu</item>
+    </style>
 
 
 

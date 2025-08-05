@@ -112,10 +112,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
                     android:background="@drawable/text_input_bg_selector"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
                     android:hint="Email"
                     >
-
-                    <com.google.android.material.textfield.TextInputEditText
+                    <EditText
                         android:id="@+id/emailInputBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -132,6 +133,8 @@
                     android:layout_marginTop="16dp"
                     android:background="@drawable/text_input_bg_selector"
                     android:hint="Şifre"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
                     app:endIconMode="password_toggle">
 
                     <com.google.android.material.textfield.TextInputEditText

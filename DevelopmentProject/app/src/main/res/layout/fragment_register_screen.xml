@@ -86,6 +86,8 @@
                     android:layout_marginHorizontal="20dp"
                     android:hint="Kullanıcı Adı"
                     android:background="@drawable/text_input_bg_selector"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
                     >
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -105,6 +107,8 @@
                     android:layout_marginTop="20dp"
                     android:hint="E-posta"
                     android:background="@drawable/text_input_bg_selector"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
                     >
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -125,6 +129,8 @@
                     android:layout_marginTop="20dp"
                     android:hint="Telefon Numarası"
                     android:background="@drawable/text_input_bg_selector"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
                     >
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -146,6 +152,8 @@
                     android:hint="Şifre"
                     app:endIconMode="password_toggle"
                     android:background="@drawable/text_input_bg_selector"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
                     >
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -166,6 +174,8 @@
                     android:layout_marginTop="20dp"
                     android:hint="Şifreyi Tekrar Giriniz"
                     android:background="@drawable/text_input_bg_selector"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
                     app:endIconMode="password_toggle">
 
                     <com.google.android.material.textfield.TextInputEditText
