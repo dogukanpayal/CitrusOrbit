@@ -142,15 +142,36 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
 
-                <androidx.appcompat.widget.AppCompatCheckBox
-                    android:id="@+id/otomatikGirisYapCheckBox"
-                    android:layout_width="wrap_content"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/otomatikGirisYapCheckBoxConstraintBox"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Otomatik Giriş Yap"
-                    />
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="16dp">
 
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/otomatikGirisYapCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/otomatikGirisYapCheckBoxTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="-20dp"
+                        android:text="Otomatik Giriş Yap"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/otomatikGirisYapCheckBox"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </TextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <Button
                     android:id="@+id/girisYapButton"
