@@ -4,10 +4,10 @@
     <item>
         <shape
             android:shape="rectangle">
-            <size android:width="24dp" android:height="24dp"/>
+            <size android:width="8dp" android:height="8dp"/>
             <solid android:color="@android:color/transparent"/>
-            <stroke android:color="@color/blackGray" android:width="2dp"></stroke>
-            <corners android:radius="6dp"></corners>
+            <stroke android:color="@color/turuncu" android:width="2dp"></stroke>
+            <corners android:radius="3dp"></corners>
         </shape>
     </item>
 
@@ -20,7 +20,7 @@
         <shape
             android:shape="rectangle"
             >
-            <size android:width="24dp" android:height="24dp"></size>
+            <size android:width="8dp" android:height="8dp"></size>
             <solid android:color="@android:color/transparent"></solid>
         </shape>
     </item>
@@ -34,14 +34,18 @@
         <shape
             android:shape="rectangle"
             >
-            <size android:width="24dp" android:height="24dp"></size>
-            <solid android:color="@color/blackGray"></solid>
-            <corners android:radius="6dp"></corners>
+            <size android:width="8dp" android:height="8dp"></size>
+            <solid android:color="@color/turuncu"></solid>
+            <corners android:radius="2dp"></corners>
         </shape>
     </item>
 
 
     <item
+        android:top="3dp"
+        android:bottom="3dp"
+        android:left="3dp"
+        android:right="3dp"
         android:id="@+id/layer_tick"
         android:drawable="@drawable/avd_checkbox_unchecked_anim"
         android:gravity="center"/>
