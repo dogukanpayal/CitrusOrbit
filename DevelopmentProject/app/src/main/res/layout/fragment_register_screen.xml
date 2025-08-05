@@ -53,19 +53,6 @@
         app:layout_constraintTop_toBottomOf="@id/registerHeaderImageConstraitBox">
 
 
-        <TextView
-            android:id="@+id/kayitOlTextBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Kayıt Ol"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
         <androidx.core.widget.NestedScrollView
             android:id="@+id/formScrollView"
             android:layout_width="0dp"
@@ -74,26 +61,38 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/kayitOlTextBox">
+            app:layout_constraintTop_toTopOf="parent">
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:fillViewport="true"
                 android:orientation="vertical"
                 android:paddingTop="16dp"
                 android:paddingBottom="24dp">
 
 
+                <TextView
+                    android:id="@+id/kayitOlTextBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kayıt Ol"
+                    android:layout_gravity="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/kullaniciAdiInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
-                    android:hint="Kullanıcı Adı"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/text_input_bg_selector"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
-                    >
+                    android:hint="Kullanıcı Adı"
+                    android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/kullaniciAdiInputEditText"
@@ -106,80 +105,74 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/registerEmailInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="10dp"
-                    android:hint="E-posta"
                     android:background="@drawable/text_input_bg_selector"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
-                    >
+                    android:hint="E-posta"
+                    android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/registerEmailEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textEmailAddress"
                         android:background="@drawable/text_input_edit_text_style"
-                        />
+                        android:inputType="textEmailAddress" />
                 </com.google.android.material.textfield.TextInputLayout>
 
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/telefonNumarasiInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="10dp"
-                    android:hint="Telefon Numarası"
                     android:background="@drawable/text_input_bg_selector"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
-                    >
+                    android:hint="Telefon Numarası"
+                    android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/telefonNumarasiInputEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="phone"
                         android:background="@drawable/text_input_edit_text_style"
-                        />
+                        android:inputType="phone" />
                 </com.google.android.material.textfield.TextInputLayout>
 
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/passwordInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="10dp"
-                    android:hint="Şifre"
-                    app:endIconMode="password_toggle"
                     android:background="@drawable/text_input_bg_selector"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="Şifre"
                     android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
-                    >
+                    app:endIconMode="password_toggle">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/passwordInputEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textPassword"
                         android:background="@drawable/text_input_edit_text_style"
-                        />
+                        android:inputType="textPassword" />
                 </com.google.android.material.textfield.TextInputLayout>
 
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/passwordAgainInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="10dp"
-                    android:hint="Şifreyi Tekrar Giriniz"
                     android:background="@drawable/text_input_bg_selector"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:hint="Şifreyi Tekrar Giriniz"
                     android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
                     app:endIconMode="password_toggle">
 
@@ -187,9 +180,8 @@
                         android:id="@+id/passwordAgainInputEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textPassword"
                         android:background="@drawable/text_input_edit_text_style"
-                        />
+                        android:inputType="textPassword" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -203,9 +195,9 @@
                         android:id="@+id/KVKKCheckBox"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
-                        android:text="" />
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
 
                     <TextView
@@ -222,10 +214,6 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
-
-
-
                 <Button
                     android:id="@+id/kayitOlButton"
                     android:layout_width="match_parent"
@@ -233,8 +221,8 @@
                     android:layout_margin="10dp"
                     android:background="@drawable/button_style"
                     android:backgroundTint="@null"
-                    app:backgroundTint="@null"
-                    android:text="Kayıt Ol" />
+                    android:text="Kayıt Ol"
+                    app:backgroundTint="@null" />
 
 
                 <LinearLayout
