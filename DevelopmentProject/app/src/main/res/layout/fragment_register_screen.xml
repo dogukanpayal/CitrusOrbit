@@ -85,7 +85,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
                     android:hint="Kullanıcı Adı"
-                    android:background="@drawable/input_box_style"
+                    android:background="@drawable/text_input_bg_selector"
                     >
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -104,7 +104,7 @@
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="20dp"
                     android:hint="E-posta"
-                    android:background="@drawable/input_box_style"
+                    android:background="@drawable/text_input_bg_selector"
                     >
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -124,7 +124,7 @@
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="20dp"
                     android:hint="Telefon Numarası"
-                    android:background="@drawable/input_box_style"
+                    android:background="@drawable/text_input_bg_selector"
                     >
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -145,7 +145,7 @@
                     android:layout_marginTop="20dp"
                     android:hint="Şifre"
                     app:endIconMode="password_toggle"
-                    android:background="@drawable/input_box_style"
+                    android:background="@drawable/text_input_bg_selector"
                     >
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -165,7 +165,7 @@
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="20dp"
                     android:hint="Şifreyi Tekrar Giriniz"
-                    android:background="@drawable/input_box_style"
+                    android:background="@drawable/text_input_bg_selector"
                     app:endIconMode="password_toggle">
 
                     <com.google.android.material.textfield.TextInputEditText

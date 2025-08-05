@@ -106,6 +106,9 @@ class LoginScreenFragment : Fragment(R.layout.fragment_login_screen) {
                 (tick as? Animatable)?.start()
             }
         }
+
+
+
     }
 
     private fun loginUser(email: String, password: String) {

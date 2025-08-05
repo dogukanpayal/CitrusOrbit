@@ -26,18 +26,5 @@
         </shape>
     </item>
 
-    <item
-        android:top="4dp"
-        android:bottom="4dp"
-        android:left="4dp"
-        android:right="4dp"
-        >
-        <shape
-            android:shape="rectangle"
-            >
-            <size android:width="16dp" android:height="16dp"></size>
-            <solid android:color="@color/turuncu"></solid>
-            <corners android:radius="2dp"></corners>
-        </shape>
-    </item>
+
 </layer-list>
