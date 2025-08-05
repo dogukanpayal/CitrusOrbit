@@ -1,5 +1,7 @@
 package com.dogukanpayal.developmentproject
 
+import android.graphics.drawable.Animatable
+import android.graphics.drawable.LayerDrawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
@@ -9,6 +11,8 @@ import androidx.core.view.WindowInsetsAnimationCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.doOnLayout
 import android.widget.Toast
+import androidx.appcompat.widget.AppCompatCheckBox
+import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.fragment.findNavController
@@ -36,8 +40,6 @@ class LoginScreenFragment : Fragment(R.layout.fragment_login_screen) {
             drawerLayout.openDrawer(GravityCompat.START)
         }
 
-
-
         val formBox   = binding.formFieldBox
         val scrollView = binding.formScrollView
 
@@ -64,7 +66,6 @@ class LoginScreenFragment : Fragment(R.layout.fragment_login_screen) {
                 })
         }
 
-
         binding.kayitOlTextButton.setOnClickListener {
             findNavController().navigate(LoginScreenFragmentDirections
                 .actionLoginScreenFragmentToRegisterScreenFragment())
@@ -82,6 +83,28 @@ class LoginScreenFragment : Fragment(R.layout.fragment_login_screen) {
                 return@setOnClickListener
             }
             loginUser(email, pw)
+        }
+
+        val cb = view.findViewById<AppCompatCheckBox>(R.id.otomatikGirisYapCheckBox)
+        cb.buttonDrawable =
+            ContextCompat.getDrawable(requireContext(), R.drawable.checkbox_unchecked)
+
+        cb.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked) {
+                val ld = ContextCompat
+                    .getDrawable(requireContext(), R.drawable.checkbox_checked_layer)!!
+                        as LayerDrawable
+                buttonView.buttonDrawable = ld
+                val tick = ld.findDrawableByLayerId(R.id.layer_tick)
+                (tick as? Animatable)?.start()
+            } else {
+                val ld = ContextCompat
+                    .getDrawable(requireContext(), R.drawable.checkbox_unchecked_layer)!!
+                        as LayerDrawable
+                buttonView.buttonDrawable = ld
+                val tick = ld.findDrawableByLayerId(R.id.layer_tick)
+                (tick as? Animatable)?.start()
+            }
         }
     }
 

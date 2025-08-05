@@ -1,12 +1,16 @@
 package com.dogukanpayal.developmentproject
 
 import android.content.Intent
+import android.graphics.drawable.Animatable
+import android.graphics.drawable.LayerDrawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.widget.AppCompatCheckBox
+import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.findNavController
 import com.dogukanpayal.developmentproject.databinding.FragmentLoginScreenBinding
 import com.dogukanpayal.developmentproject.databinding.FragmentRegisterScreenBinding
@@ -120,6 +124,29 @@ class RegisterScreenFragment : Fragment() {
             val action = RegisterScreenFragmentDirections.actionRegisterScreenFragmentToLoginScreenFragment()
             findNavController().navigate(action)
         }
+
+        val cb = view.findViewById<AppCompatCheckBox>(R.id.KVKKCheckBox)
+        cb.buttonDrawable =
+            ContextCompat.getDrawable(requireContext(), R.drawable.checkbox_unchecked)
+
+        cb.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked) {
+                val ld = ContextCompat
+                    .getDrawable(requireContext(), R.drawable.checkbox_checked_layer)!!
+                        as LayerDrawable
+                buttonView.buttonDrawable = ld
+                val tick = ld.findDrawableByLayerId(R.id.layer_tick)
+                (tick as? Animatable)?.start()
+            } else {
+                val ld = ContextCompat
+                    .getDrawable(requireContext(), R.drawable.checkbox_unchecked_layer)!!
+                        as LayerDrawable
+                buttonView.buttonDrawable = ld
+                val tick = ld.findDrawableByLayerId(R.id.layer_tick)
+                (tick as? Animatable)?.start()
+            }
+        }
+
     }
 
     private fun signupUser(username: String, email: String, password:String, phone: String){
