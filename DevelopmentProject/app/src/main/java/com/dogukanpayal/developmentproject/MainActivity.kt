@@ -35,13 +35,7 @@ class MainActivity : AppCompatActivity() {
         navView.setNavigationItemSelectedListener { item ->
             item.isChecked=true
 
-            when (item.itemId){
-                R.id.takvimItem -> findNavController(R.id.nav_host_fragment)
-                    .navigate(R.id.page1Fragment)
 
-                R.id.gunlukItem -> findNavController(R.id.nav_host_fragment)
-                    .navigate(R.id.page2Fragment)
-            }
             drawer.closeDrawer(GravityCompat.START)
             true
         }
