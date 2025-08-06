@@ -11,6 +11,7 @@
         android:roundIcon="@drawable/citrus_orbit_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.DevelopmentProject"
+        android:name=".MyApplication"
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"
