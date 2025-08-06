@@ -35,7 +35,25 @@ class MainActivity : AppCompatActivity() {
         navView.setNavigationItemSelectedListener { item ->
             item.isChecked=true
 
+            when (item.itemId){
+                R.id.takvimItem -> findNavController(R.id.nav_host_fragment)
+                    .navigate(R.id.takvimFragment)
 
+                R.id.gunlukItem -> findNavController(R.id.nav_host_fragment)
+                    .navigate(R.id.gunlukFragment)
+
+                R.id.notesItem -> findNavController(R.id.nav_host_fragment)
+                    .navigate(R.id.notlarFragment)
+
+                R.id.routineItem -> findNavController(R.id.nav_host_fragment)
+                    .navigate(R.id.rutinTakibiFragment)
+
+                R.id.toDoItem -> findNavController(R.id.nav_host_fragment)
+                    .navigate(R.id.yapilacaklarFragment)
+
+                R.id.ayarlarItem -> findNavController(R.id.nav_host_fragment)
+                    .navigate(R.id.settingsFragment)
+            }
             drawer.closeDrawer(GravityCompat.START)
             true
         }

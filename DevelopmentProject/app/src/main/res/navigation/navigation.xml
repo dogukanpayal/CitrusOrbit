@@ -36,13 +36,33 @@
             app:destination="@id/loginScreenFragment" />
     </fragment>
     <fragment
-        android:id="@+id/page1Fragment"
-        android:name="com.dogukanpayal.developmentproject.Page1Fragment"
-        android:label="fragment_page1"
-        tools:layout="@layout/fragment_page1" />
+        android:id="@+id/gunlukFragment"
+        android:name="com.dogukanpayal.developmentproject.GunlukFragment"
+        android:label="fragment_gunluk"
+        tools:layout="@layout/fragment_gunluk" />
     <fragment
-        android:id="@+id/page2Fragment"
-        android:name="com.dogukanpayal.developmentproject.Page2Fragment"
-        android:label="fragment_page2"
-        tools:layout="@layout/fragment_page2" />
+        android:id="@+id/rutinTakibiFragment"
+        android:name="com.dogukanpayal.developmentproject.RutinTakibiFragment"
+        android:label="fragment_rutin_takibi"
+        tools:layout="@layout/fragment_rutin_takibi" />
+    <fragment
+        android:id="@+id/notlarFragment"
+        android:name="com.dogukanpayal.developmentproject.NotlarFragment"
+        android:label="fragment_notlar"
+        tools:layout="@layout/fragment_notlar" />
+    <fragment
+        android:id="@+id/takvimFragment"
+        android:name="com.dogukanpayal.developmentproject.TakvimFragment"
+        android:label="fragment_takvim"
+        tools:layout="@layout/fragment_takvim" />
+    <fragment
+        android:id="@+id/yapilacaklarFragment"
+        android:name="com.dogukanpayal.developmentproject.YapilacaklarFragment"
+        android:label="fragment_yapilacaklar"
+        tools:layout="@layout/fragment_yapilacaklar" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.dogukanpayal.developmentproject.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>
