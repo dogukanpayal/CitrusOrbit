@@ -48,10 +48,9 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/hamburger"
+            android:src="@drawable/navigation_icon"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-
         </ImageButton>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
