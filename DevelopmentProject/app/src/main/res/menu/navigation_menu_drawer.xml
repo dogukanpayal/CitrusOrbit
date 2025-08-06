@@ -2,47 +2,50 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
         <item
-            android:title="Robot Kontrol"
+            android:title="Sayfalar"
             android:enabled="false">
             <menu>
                 <group
-                    android:id="@+id/robotControlGroup"
+                    android:id="@+id/sayfalarGroup"
                     android:checkableBehavior="single">
                     <item
-                        android:id="@+id/item1"
-                        android:icon="@drawable/outline_alarm_on_24"
-                        android:title="Robot Kontrolü" />
+                        android:id="@+id/takvimItem"
+                        android:icon="@drawable/calendar_icon"
+                        android:title="Takvim" />
                     <item
-                        android:id="@+id/item2"
-                        android:icon="@drawable/outline_alarm_on_24"
-                        android:title="Oturum Geçmişi"/>
+                        android:id="@+id/gunlukItem"
+                        android:icon="@drawable/diary_icon"
+                        android:title="Günlük"/>
+                    <item
+                        android:id="@+id/notesItem"
+                        android:icon="@drawable/notes_icon"
+                        android:title="Notlar"/>
+                    <item
+                        android:id="@+id/routineItem"
+                        android:icon="@drawable/routine_icon"
+                        android:title="Rutin Takibi"/>
+                    <item
+                        android:id="@+id/toDoItem"
+                        android:icon="@drawable/to_do_icon"
+                        android:title="Yapılacaklar"/>
                 </group>
             </menu>
         </item>
+        <group
+            android:id="@+id/otherItems"
+            android:checkableBehavior="single"
+            >
+            <item
+                android:id="@+id/ayarlarItem"
+                android:icon="@drawable/settings_icon"
+                android:title="Ayarlar">
+            </item>
 
-    <item
-        android:title="Ayarlar"
-        android:enabled="false">
-        <menu>
-            <group
-                android:id="@+id/settingsGroup"
-                android:checkableBehavior="single">
-                <item
-                    android:id="@+id/item3"
-                    android:icon="@drawable/outline_alarm_on_24"
-                    android:title="Profil" />
-                <item
-                    android:id="@+id/item4"
-                    android:icon="@drawable/outline_alarm_on_24"
-                    android:title="Hakkında"/>
-            </group>
-        </menu>
-    </item>
-    <item
-        android:id="@+id/item5"
-        android:icon="@drawable/outline_alarm_on_24"
-        android:title="Çıkış Yap">
-    </item>
+            <item
+                android:id="@+id/cikisYapItem"
+                android:icon="@drawable/exit_icon"
+                android:title="Çıkış Yap">
+            </item>
+        </group>
 </menu>

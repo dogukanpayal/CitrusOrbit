@@ -36,10 +36,10 @@ class MainActivity : AppCompatActivity() {
             item.isChecked=true
 
             when (item.itemId){
-                R.id.item1 -> findNavController(R.id.nav_host_fragment)
+                R.id.takvimItem -> findNavController(R.id.nav_host_fragment)
                     .navigate(R.id.page1Fragment)
 
-                R.id.item2 -> findNavController(R.id.nav_host_fragment)
+                R.id.gunlukItem -> findNavController(R.id.nav_host_fragment)
                     .navigate(R.id.page2Fragment)
             }
             drawer.closeDrawer(GravityCompat.START)
