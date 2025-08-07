@@ -5,5 +5,9 @@
             <solid android:color="@color/turuncu"></solid>
         </shape>
     </item>
+
+    <item android:state_pressed="true"
+        android:drawable="@android:color/transparent"/>
+
     <item android:color="@android:color/transparent"></item>
 </selector>

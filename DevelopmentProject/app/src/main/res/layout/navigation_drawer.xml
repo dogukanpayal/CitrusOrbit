@@ -7,6 +7,8 @@
     app:menu="@menu/navigation_menu_drawer"
     app:itemTextColor="@color/nav_item_color_state"
     app:itemIconTint="@color/nav_item_color_state"
+    android:backgroundTint="@null"
+    app:itemBackground="@android:color/transparent"
     app:headerLayout="@layout/header_navigation_drawer"
     >
 
